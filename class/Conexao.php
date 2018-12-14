@@ -1,5 +1,5 @@
 <?php
-require_once('C:/xampp/htdocs/portfolio/config/config.php');
+require_once('C:/xampp/htdocs/KVM/config/config.php');
 
 class Conexao {
     static function getConexao() {

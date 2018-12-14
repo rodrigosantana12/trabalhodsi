@@ -12,17 +12,16 @@ class UsuarioDAO {
     function cadastrar($email, $senha) {
         try {
             $cmd = $this->pdo->prepare("INSERT INTO usuario 
-            (email, senha, data_cadastro) 
-            VALUES (:email, :senha, :data_cadastro)");
+            (email, senha) 
+            VALUES (:email, :senha)");
             
             $cmd->bindValue(':email', $email);
             $cmd->bindValue(':senha', password_hash($senha, PASSWORD_DEFAULT));
-            $cmd->bindValue(':data_cadastro', date('Y-m-d H:i:s'));
             $cmd->execute();
             
         } catch(Exception $e) {
             die($e->getMessage());
-        }        
+        }
     }
 
     function getUsuario($email) {

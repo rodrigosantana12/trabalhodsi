@@ -11,19 +11,7 @@
       <div class="card card-login mx-auto mt-5">
         <div class="card-header"><?= $pageTitle ?></div>
         <div class="card-body">
-          <form action="action/fazer.cadastro.php" method="get">
-            <div class="form-group">
-              <div class="form-label-group">
-                <input type="text" id="inputNome" name="nome" class="form-control" placeholder="Nome" required="required" autofocus="autofocus">
-                <label for="inputNome">Nome</label>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-label-group">
-                <input type="text" id="inputSobrenome" name="sobrenome" class="form-control" placeholder="Sobrenome" required="required">
-                <label for="inputSobrenome">Sobrenome</label>
-              </div>
-            </div>
+          <form action="action/fazer.cadastro.php" method="POST">
             <div class="form-group">
               <div class="form-label-group">
                 <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required="required">
@@ -43,6 +31,8 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Cadastrar">
           </form>
+          <div class="text-center">
+          </div>
         </div>
       </div>
     </div>
